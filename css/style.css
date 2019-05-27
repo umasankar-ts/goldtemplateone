@@ -568,7 +568,7 @@ section{
         padding-bottom: 1em;
     }
     .wedding-detail-subtitle{
-        font-size: 0.97em;
+        font-size: 1.2em;
     }
     .w-detail{
         padding: 0 15px;
@@ -577,7 +577,7 @@ section{
         font-size: 1.3em;
     }
     .wedding-details-content{
-        font-size: 0.95em !important;
+        font-size: 1.25em !important;
     }
     .welcome-area-content-font{
         font-size: 0.9em;
@@ -655,6 +655,9 @@ section{
     }
     .gallery-image-shadow{
         padding: 0;
+    }
+    .wedding-details-image{
+        height: 35px;
     }
 
 }
