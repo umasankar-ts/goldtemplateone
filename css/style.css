@@ -17,7 +17,7 @@ body{
     padding-bottom:  2em;
 }
 .small-heading-shadow{
-    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
 }
 .banner-map-card-shadow{
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -258,9 +258,7 @@ p{
 
 .section .heading .icon.color-white{ color: #fff; }
 
-.w-detail p{
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
-}
+
 .section .margin-bottom{ margin-bottom: 30px; }
 .wedding-details p{
     font-size: 1.2em;
