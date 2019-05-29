@@ -508,7 +508,7 @@ section{
         padding: 8px 0;
     }
     .banner-couple-name{
-        font-size: 2.5em;
+        font-size: 2.7em;
     }
     .banner-holding-hand-margin{
         margin-top: 0 !important;
@@ -568,7 +568,7 @@ section{
         padding-bottom: 1em;
     }
     .wedding-detail-subtitle{
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
     .w-detail{
         padding: 0 15px;
@@ -577,10 +577,10 @@ section{
         font-size: 1.3em;
     }
     .wedding-details-content{
-        font-size: 1.25em !important;
+        font-size: 1em !important;
     }
     .welcome-area-content-font{
-        font-size: 0.9em;
+        font-size: 1em;
     }
     .most-welcome-font{
         font-size: 1.2em;
@@ -601,7 +601,7 @@ section{
         margin-top: 20px;
     }
     .footer-contact-font-size{
-        font-size: 0.67em;
+        font-size: 0.60em;
         padding: 0 !important;
     }
     .footer-rasigan-font{
@@ -663,6 +663,7 @@ section{
 }
 
 
+/**************************************8*/
 /*Tablet - ipad media query*/
 @media (min-width: 768px) and (max-width: 1024px) {
 
@@ -674,3 +675,10 @@ section{
         /*display: none;*/
     }
 }
+
+@media (max-width: 390px) {
+    .wedding-details-content{
+        font-size: 12px !important;
+    }
+}
+
