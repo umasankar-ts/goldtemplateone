@@ -18,7 +18,7 @@
     <!-- Css File -->
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/responsive.css" type="text/css">
-    <link href="css/ninja-slider.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="css/lightbox.min.css" type="text/css">
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei" rel="stylesheet">
     <!-- Font awesome link -->
@@ -28,7 +28,8 @@
     <!--  <link rel="shortcut icon" href="images/fav-icon32.png"  type="image/png"> -->
     <!-- Countdown-Timer-JavaScript -->
     <script defer src="js/countdown.js"></script>
-    <script defer src="js/ninja-slider.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/lightbox-plus-jquery.min.js"></script>
+
 
     <!-- Loader icon script -->
     <script type="text/javascript">
@@ -73,8 +74,14 @@
     <div class="body-margin card body-card-shadow" id="show_content">
         <!-- Header -->
         <div class="col-lg-12 header-padding" align="center">
-            <h3 class="header-title small-heading-shadow margin-bottom-none">We are no longer two, God has joined us
+            <span class="d-none d-sm-block">
+                <h3 class="header-title small-heading-shadow margin-bottom-none">We are no longer two, God has joined us
                 together</h3>
+            </span>
+            <span class="d-block d-sm-none">
+                  <h3 class="header-title small-heading-shadow margin-bottom-none">We are no longer two,<br> God has joined us
+                together</h3>
+            </span>
         </div>
         <!-- Header end -->
         <section>
@@ -313,149 +320,55 @@
             </section>
             <!--Gallery Container-->
             <section class="container padding-top-bottom padding-top-none">
-                <div class="gallery-container">
-                    <div id="ninja-slider">
-                        <div class="slider-inner">
-                            <ul>
-                                <li>
-                                    <a class="ns-img" href="gallery-images/gallery1.webp"></a>
-                                    <div class="caption">
-                                        <h4>Dummy Caption 1</h4>
-                                        <p class="slider-small-desc">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                            elit. Phasellus accumsan
-                                            purus.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a class="ns-img" href="gallery-images/gallery2.webp"></a>
-                                    <div class="caption">
-                                        <h4>Dummy Caption 2</h4>
-                                        <p class="slider-small-desc">Neque porro quisquam est, qui dolorem ipsum quia
-                                            dolor sit amet</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span class="ns-img"
-                                          style="background-image:url(gallery-images/gallery3.webp);"></span>
-                                    <div class="caption">
-                                        <h4>Dummy Caption 3</h4>
-                                        <p class="slider-small-desc">Duis fringilla arcu convallis urna commodo, et
-                                            tempus velit posuere.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a class="ns-img" href="gallery-images/gallery4.webp"></a>
-                                    <div class="caption">
-                                        <h3>Dummy Caption 4</h3>
-                                        <p class="slider-small-desc">Quisque semper dolor sed neque consequat
-                                            scelerisque at sed ex. Nam gravida
-                                            massa.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a class="ns-img" href="gallery-images/gallery5.webp"></a>
-                                    <div class="caption">
-                                        <h4>Dummy Caption 5</h4>
-                                        <p class="slider-small-desc">Proin non dui at metus suscipit bibendum.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a class="ns-img" href="gallery-images/gallery6.webp"></a>
-                                    <div class="caption">
-                                        <h4>Dummy Caption 6</h4>
-                                        <p class="slider-small-desc">Proin non dui at metus suscipit bibendum.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a class="ns-img" href="gallery-images/gallery1.webp"></a>
-                                    <div class="caption">
-                                        <h4>Dummy Caption 7</h4>
-                                        <p class="slider-small-desc">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                            elit. Phasellus accumsan
-                                            purus.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a class="ns-img" href="gallery-images/gallery2.webp"></a>
-                                    <div class="caption">
-                                        <h4>Dummy Caption 8</h4>
-                                        <p class="slider-small-desc">Neque porro quisquam est, qui dolorem ipsum quia
-                                            dolor sit amet</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span class="ns-img"
-                                          style="background-image:url(gallery-images/gallery3.webp);"></span>
-                                    <div class="caption">
-                                        <h4>Dummy Caption 9</h4>
-                                        <p class="slider-small-desc">Duis fringilla arcu convallis urna commodo, et
-                                            tempus velit posuere.</p>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div id="fsBtn" class="fs-icon" title="Expand/Close"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-slider">
+                <div class="gallery">
                     <div class="row" align="center">
                         <div class="col-lg-4 col-sm-4 col-12">
                             <div class="card gallery-image-shadow margin-top-3-percent">
-                                <img src="gallery-images/gallery1.webp" onclick="lightbox(0)"
-                                     class="boxshadow-effect img-fluid gallery-img-ht">
+                                <a href="gallery-images/gallery1.webp" data-lightbox="mygallery" data-title="First image"><img src="gallery-images/gallery1.webp" class="boxshadow-effect img-fluid gallery-img-ht"></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-sm-4 col-12">
                             <div class="card gallery-image-shadow margin-top-3-percent">
-                                <img src="gallery-images/gallery2.webp" onclick="lightbox(1)"
-                                     class="boxshadow-effect img-fluid gallery-img-ht">
+                                <a href="gallery-images/gallery2.webp" data-lightbox="mygallery"><img src="gallery-images/gallery2.webp" class="boxshadow-effect img-fluid gallery-img-ht"></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-sm-4 col-12">
                             <div class="card gallery-image-shadow margin-top-3-percent">
-                                <img src="gallery-images/gallery3.webp" onclick="lightbox(2)"
-                                     class="boxshadow-effect img-fluid gallery-img-ht">
+                                <a href="gallery-images/gallery3.webp" data-lightbox="mygallery"><img src="gallery-images/gallery3.webp" class="boxshadow-effect img-fluid gallery-img-ht"></a>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-4 col-sm-4 col-12">
                             <div class="card gallery-image-shadow margin-top-3-percent">
-                                <img src="gallery-images/gallery4.webp" onclick="lightbox(3)"
-                                     class="boxshadow-effect img-fluid gallery-img-ht">
+                                <a href="gallery-images/gallery4.webp" data-lightbox="mygallery"><img src="gallery-images/gallery4.webp" class="boxshadow-effect img-fluid gallery-img-ht"></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-sm-4 col-12">
                             <div class="card gallery-image-shadow margin-top-3-percent">
-                                <img src="gallery-images/gallery5.webp" onclick="lightbox(4)"
-                                     class="boxshadow-effect img-fluid gallery-img-ht">
+                                <a href="gallery-images/gallery5.webp" data-lightbox="mygallery"><img src="gallery-images/gallery5.webp" class="boxshadow-effect img-fluid gallery-img-ht"></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-sm-4 col-12">
                             <div class="card gallery-image-shadow margin-top-3-percent">
-                                <img src="gallery-images/gallery6.webp" onclick="lightbox(5)"
-                                     class="boxshadow-effect img-fluid gallery-img-ht">
+                                <a href="gallery-images/gallery6.webp" data-lightbox="mygallery"><img src="gallery-images/gallery6.webp" class="boxshadow-effect img-fluid gallery-img-ht"></a>
                             </div>
                         </div>
                     </div>
                     <div class="row" align="center">
                         <div class="col-lg-4 col-sm-4 col-12">
                             <div class="card gallery-image-shadow margin-top-3-percent">
-                                <img src="gallery-images/gallery1.webp" onclick="lightbox(6)"
-                                     class="boxshadow-effect img-fluid gallery-img-ht">
+                                <a href="gallery-images/gallery1.webp" data-lightbox="mygallery"><img src="gallery-images/gallery1.webp" class="boxshadow-effect img-fluid gallery-img-ht"></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-sm-4 col-12">
                             <div class="card gallery-image-shadow margin-top-3-percent">
-                                <img src="gallery-images/gallery2.webp" onclick="lightbox(7)"
-                                     class="boxshadow-effect img-fluid gallery-img-ht">
+                                <a href="gallery-images/gallery2.webp" data-lightbox="mygallery"><img src="gallery-images/gallery2.webp" class="boxshadow-effect img-fluid gallery-img-ht"></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-sm-4 col-12">
                             <div class="card gallery-image-shadow margin-top-3-percent">
-                                <img src="gallery-images/gallery3.webp" onclick="lightbox(8)"
-                                     class="boxshadow-effect img-fluid gallery-img-ht">
+                                <a href="gallery-images/gallery3.webp" data-lightbox="mygallery"><img src="gallery-images/gallery3.webp" class="boxshadow-effect img-fluid gallery-img-ht"></a>
                             </div>
                         </div>
                     </div>
