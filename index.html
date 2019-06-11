@@ -43,32 +43,17 @@
             })
         })
     </script>
-    <!--Gallery slider script-->
-    <script defer>
-        function lightbox(idx) {
-            //show the slider's wrapper: this is required when the transitionType has been set to "slide" in the ninja-slider.js
-            var ninjaSldr = document.getElementById("ninja-slider");
-            ninjaSldr.parentNode.style.display = "block";
-
-            nslider.init(idx);
-
-            var fsBtn = document.getElementById("fsBtn");
-            fsBtn.click();
-        }
-
-        function fsIconClick(isFullscreen, ninjaSldr) { //fsIconClick is the default event handler of the fullscreen button
-            if (isFullscreen) {
-                ninjaSldr.parentNode.style.display = "none";
-            }
-        }
-    </script>
 </head>
 <body>
 <div class="container-fluid no-padding">
-   <div id="loader_image" class="row justify-content-center">
-       <div class="col-lg-12 loader-container" align="center">
-            <img src="images/spiral-loader.gif" class="img-fluid" alt="Loader">
-        </div>
+   <div id="loader_image">
+           <div class="beatingHeart">
+               <div class="heart"></div>
+               <div class="heart heart2"></div>
+               <div class="heart heart3 pinkHeart"></div>
+               <div class="heart heart4 fushiaHeart"></div>
+               <div class="heart hear5 pinkHeart"></div>
+           </div>
         <!--<p class="small-heading-shadow font-bold">Wedding Invitation</p>-->
    </div>
     <div class="body-margin card body-card-shadow" id="show_content">
